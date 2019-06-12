@@ -1,0 +1,73 @@
+<view class='main'>
+  <!-- 头部搜索区域 -->
+  <view class='header_warp'>
+    <!-- 分类图标 -->
+    <navigator hover-start-time="100" hover-stay-time="100" class='header_category'>
+      <image src='../../images/icon/category_white.png'></image>
+      <text>分类</text>
+    </navigator>
+  
+    <!-- 搜索框 -->
+    <view class='header_search'>
+      <input type='text' class="iconfont" placeholder='{{placeholderContent}}'></input>
+    </view>
+
+    <!-- 抢购图标 -->
+    <navigator hover-start-time="100" hover-stay-time="100" class='jubaopen'>
+      <image src='../../images/icon/快抢.png'></image>
+    </navigator>
+  </view>
+
+  <!-- 热搜榜 -->
+  <view class='hotSearch_warp'>
+  <view class='hotSearch'>
+    <view>热搜</view>
+    <scroll-view scroll-x >
+      <block wx:for="{{hotSearch}}" wx:key="{{index}}">
+        <view class='hotSearch_item'>
+        <navigator hover-start-time="100" hover-stay-time="100">{{item}}</navigator>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  </view>
+
+  <!-- banner图片 -->
+  <view class='banner_warp'>
+    <swiper autoplay circular>
+      <block wx:for="{{bannerImage}}" wx:key="{{index}}">
+        <swiper-item class="banner_item">
+          <image class='banner_image' src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 导航 -->
+  <view class='nav_warp'>
+    <block wx:for="{{navImage}}" wx:key="{{index}}">
+      <!-- <view class='nav'> -->
+        <navigator hover-start-time="100" hover-stay-time="100" class="nav_navigator">
+            <image class='nav_image' mode="scaleToFill" src='{{item.image}}'></image>
+            <text class='nav_title'>
+              {{item.name}}
+            </text>
+        </navigator>
+      <!-- </view> -->
+    </block>
+  </view>
+
+  <!-- 推荐分类 -->
+  <view class='recommend_warp'>
+    <scroll-view scroll-x>
+      <view bindtap="navActiveClick" data-index='{{index}}' wx:for="{{recommendCategory}}" wx:key="{{index}}">
+          <navigator hover-class="none" url='../category/category' class='r_navigator {{recommendIndex === index ? "active":""}}'>
+            <text class='r_t'>
+            {{item.title}}
+              <text class='r_f'>{{item.desciption}}</text>
+            </text>
+          </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/qiang/qiang",
+    "pages/shappingcar/shappingcar",
+    "pages/me/me",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#666",
+    "selectedColor":"#5db7e6",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/icon/index.png",
+      "selectedIconPath": "images/icon/index_active.png"
+    },
+    {
+      "pagePath": "pages/category/category",
+      "text": "分类",
+      "iconPath": "images/icon/category.png",
+      "selectedIconPath": "images/icon/category_active.png"
+    },
+    {
+      "pagePath": "pages/qiang/qiang",
+      "text": "每日领",
+      "iconPath": "images/icon/qiang.png",
+      "selectedIconPath": "images/icon/qiang_active.png"
+    },
+    {
+      "pagePath": "pages/shappingcar/shappingcar",
+      "text": "购物车",
+      "iconPath": "images/icon/shapping_car.png",
+      "selectedIconPath": "images/icon/shapping_car_active.png"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "images/icon/me.png",
+      "selectedIconPath": "images/icon/me_active.png"
+    }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
